@@ -1,14 +1,9 @@
-/*
-Autor: Profe
-Nombre: 3_entrada_datos.js
-Fecha: 2026-08-05
-Proyecto: Ejercicios de JavaScript
-*/
-
+var nombre;
+var edad;
 nombre=prompt('Ingrese su nombre:','');
 edad=prompt('Ingrese su edad:','');
-document.write('Hola ');
+document.write('hola ');
 document.write(nombre);
 document.write(' asi que tienes ');
 document.write(edad);
-document.write(' años.');
+document.write(' años');
