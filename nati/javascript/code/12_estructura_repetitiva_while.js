@@ -1,9 +1,10 @@
-var valor;
+var x;
 
-valor = 1;
+x = 1;
 
-while(valor <= 10){
-    document.write(valor);
+while(x <= 10)
+{
+    document.write(x);
     document.write('<br>')
-    valor = valor + 1;
+    x = x + 1;
 }

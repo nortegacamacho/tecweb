@@ -1,7 +1,6 @@
-var valor;
+var f;
 
-//El bucle se ejecuta hasta que valor llega a 10
-for(valor = 1; valor <= 10; valor ++){
-    document.write(valor);
-    document.write('<br>')
+for(f = 1; f <= 10; f ++)
+{
+    document.write(f+" ");
 }

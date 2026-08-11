@@ -1,6 +1,7 @@
 var valor;
 
 valor = prompt('Introduzca un valor entre 1 y 5');
+//Convertimos a entero
 
 valor = parseInt(valor);
 
