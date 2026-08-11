@@ -1,4 +1,4 @@
-function mostrarFecha(){
+function mostrarFechaHora(){
     var fecha;
     fecha = new Date();
 
@@ -12,5 +12,5 @@ function mostrarFecha(){
     document.write(fecha.getMinutes());
 
 }
-
-mostrarFecha();
+//Llamada a la función
+mostrarFechaHora();

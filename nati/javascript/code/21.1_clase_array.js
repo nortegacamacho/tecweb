@@ -1,3 +1,11 @@
+function mostrarFecha(meses, dias){
+    var num;
+    num = prompt('Introduzca un numero y le diré que mes cae y cuantos dias tiene: ');
+
+    document.write('El mes es: ' + meses[num - 1] + '<br>');
+    document.write('Este mes tiene ' + dias[num - 1] + ' dias');
+}
+
 var meses;
 meses = new Array(12);
 
@@ -29,13 +37,5 @@ dias[8] = 30; // Septiembre
 dias[9] = 31; // Octubre
 dias[10] = 30; // Noviembre
 dias[11] = 31; // Diciembre
-
-function mostrarFecha(meses, dias){
-    var num;
-    num = prompt('Introduzca un numero y le diré que mes cae y cuantos dias tiene: ');
-
-    document.write('El mes es: ' + meses[num - 1] + '<br>');
-    document.write('Este mes tiene ' + dias[num - 1] + ' dias');
-}
 
 mostrarFecha(meses, dias);
