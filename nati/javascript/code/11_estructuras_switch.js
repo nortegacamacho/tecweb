@@ -1,17 +1,24 @@
 var valor;
-valor=prompt("Ingrese un valor entre 1 y 5: ", "");
-// Convertir el valor a número entero
-valor=parseInt(valor);
-switch(valor){
-    case 1: document.write ('uno');
+
+valor = prompt('Introduzca un valor entre 1 y 5');
+
+valor = parseInt(valor);
+
+switch (valor){
+    case 1: document.write('El valor es uno');
     break;
-    case 2: document.write ('dos');
+
+    case 2: document.write('El valor es dos');
     break;
-    case 3: document.write ('tres');
+
+    case 3: document.write('El valor es tres');
     break;
-    case 4: document.write ('cuatro');
+
+    case 4: document.write('El valor es cuatro');
     break;
-    case 5: document.write ('cinco');
+
+    case 5: document.write('El valor es cinco');
     break;
-    default: document.write ('debe ingresar un valor comprendido entre 1 y 5');
+
+    default: document.write('El valor introducido no es válido');
 }

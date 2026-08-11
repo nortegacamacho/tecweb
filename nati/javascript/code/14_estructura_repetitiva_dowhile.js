@@ -1,22 +1,18 @@
 var valor;
+
+
+
 do{
-    valor=prompt("Ingrese un número entre 0 y 999:","");
-    valor=parseInt(valor);
-    document.write('El número '+valor+' tiene ');
-    if (valor<10)
-    {
-        document.write('Tiene 1 digitos');
-    }
-    else
-    {
-        if(valor<100)
-        {
-            document.write('Tiene 2 digitos');
+    valor = prompt('Introduzca un valor entre 0 y 999');
+    valor = parseInt(valor);
+
+    if(valor < 10){
+        document.write('El valor tiene 1 dígito');
+    } else{
+        if(valor < 100){
+            document.write('El valor tiene 2 dígitos');
+        } else{
+            document.write('El valor tiene 3 dígitos');
         }
-        else
-        {
-        document.write('Tiene 3 digitos');
     }
- } document.write('<br>');
-}while(valor!=0);
-    
+} while (valor != 0)

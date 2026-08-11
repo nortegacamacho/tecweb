@@ -1,9 +1,13 @@
-function mostrarMensaje()
-{
-    document.write("Cuidado<br>");
-    document.write("Ingrese su documento correctamente<br>");
+function advertencia(){
+    document.write('Cuidado');
+    document.write('<br>')
+    document.write('Introduzca su documento correctamente');
+    document.write('<br>')
+    document.write('Introduzca su documento correctamente');
+    document.write('<br>')
+    document.write('Intento fallido, vuelva a intentarlo nuevamente');
 }
 
-mostrarMensaje();
-mostrarMensaje();
-mostrarMensaje();
+advertencia();
+
+advertencia();
