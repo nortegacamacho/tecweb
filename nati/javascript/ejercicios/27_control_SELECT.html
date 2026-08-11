@@ -1,33 +1,12 @@
-<html>
-    <head>
-    </head>
-    <body>
-    <script language="JavaScript">
-    function cambiarColor()
-    {
-        document.form1.text1.value=
-        document.form1.select1.selectedIndex;
-        document.form1.text2.value=
-        document.form1.select1.options[document.form1.select1.selectedIndex].text;
-        document.form1.text3.value=
-        [document.form1.select1.selectedIndex].value;
-    }
-    </script>
-    <form name="form1">
-    <select size="1" name="select1" onchange="cambiarColor()">
-    <option value="0xFF0000">Rojo</option>
-    <option value="0x00FF00">Verde</option>
-    <option value="0x0000FF">Azul</option>
-    </select>
-    </p>
-    <br>
-    Número de índice seleccionado del objeto SELECT:<input type="text"
-    name="text1">
-    <br>
-    Texto seleccionado:<input type="text" name="text2">
-    <br>
-    Valor asociado:<input type="text" name="text3">
-    <br>
-    </form>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control SELECT en Javascript</title>
+</head>
+<body>
+    <div><a href="../index.html">Volver a la página principal</a></div> 
+    <script language="javascript" src="../code/27_control_SELECT.js"></script>
+</body>
 </html>

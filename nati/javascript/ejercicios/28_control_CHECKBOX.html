@@ -1,33 +1,12 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control CHECKBOX en Javascript</title>
 </head>
 <body>
-<script language="JavaScript">
-function contarSeleccionados()
-{
-    var cant=0;
-    if (document.form1.lenguaje1.checked)
-    cant++;
-    if (document.form1.lenguaje2.checked)
-    cant++;
-    if (document.form1.lenguaje3.checked)
-    cant++;
-    if (document.form1.lenguaje4.checked)
-    cant++;
-    alert('Conoce ' + cant + ' lenguajes');
-}
-</script>
-<form name="form1">
-<input type="checkbox" name="lenguaje1">JavaScript
-<br>
-<input type="checkbox" name="lenguaje2">PHP
-<br>
-<input type="checkbox" name="lenguaje3">JSP
-<br>
-<input type="checkbox" name="lenguaje4">VB.Net
-<br>
-<input type="button" value="Mostrar"
-    onclick="contarSeleccionados()">
-</form>
+    <div><a href="../index.html">Volver a la página principal</a></div> 
+    <script language="javascript" src="../code/28_control_CHECKBOX.js"></script>
 </body>
 </html>
