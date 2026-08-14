@@ -14,3 +14,6 @@ if(num1>num2 && num1>num3){
         document.write('el mayor es el '+num3);
     }
 }
+//El símbolo && significa "Y ADEMÁS".
+// En español claro: "¿Es el primer número mayor que el segundo Y ADEMÁS
+// mayor que el tercero?".

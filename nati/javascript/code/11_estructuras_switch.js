@@ -23,3 +23,6 @@ switch (valor){
 
     default: document.write('El valor introducido no es válido');
 }
+//switch: en lugar de poner un montón de if pegados uno detrás de otro,
+// crea un menú de opciones directo y muy ordenado.
+//break; sirve Para salir del menú inmediatamente después de haber dado la respuesta correcta.
