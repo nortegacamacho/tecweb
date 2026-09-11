@@ -6,27 +6,38 @@ $apellido1 = "";
 $apellido2 = "";
 $edad = "";
 $sexo = "";
+$estadoCivil = "";
 $meses = [];
+$periodoVacaciones = "";
 $error = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+    // Recoger datos personales
     $nombre = $_POST["nombre"];
     $apellido1 = $_POST["apellido1"];
     $apellido2 = $_POST["apellido2"];
     $edad = $_POST["edad"];
 
-    // Comprobar el sexo
+    // Recoger sexo
     if (isset($_POST["sexo"])) {
         $sexo = $_POST["sexo"];
     }
 
-    // Comprobar los meses seleccionados
+    // Recoger estado civil
+    if (isset($_POST["estadoCivil"])) {
+        $estadoCivil = $_POST["estadoCivil"];
+    }
+
+    // Recoger meses de vacaciones
     if (isset($_POST["meses"])) {
         $meses = $_POST["meses"];
     }
 
-    // Debe elegir entre 1 y 3 meses
+    // Recoger periodo de vacaciones
+    $periodoVacaciones = $_POST["periodoVacaciones"];
+
+    // Comprobar que se han seleccionado entre 1 y 3 meses
     if (count($meses) < 1 || count($meses) > 3) {
         $error = "Debes seleccionar entre 1 y 3 meses de vacaciones.";
     }
@@ -35,6 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Ejercicio 2 - Formulario</title>
@@ -70,6 +82,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <input type="radio" name="sexo" value="Mujer">
     <label>Mujer</label>
+
+    <br><br>
+
+
+    <h3>Estado civil:</h3>
+
+    <select name="estadoCivil" required>
+
+        <option value="">-- Selecciona una opción --</option>
+        <option value="Soltero">Soltero</option>
+        <option value="Casado">Casado</option>
+        <option value="Divorciado">Divorciado</option>
+        <option value="Otros">Otros</option>
+
+    </select>
 
     <br><br>
 
@@ -116,36 +143,77 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <br><br>
 
+
+    <h3>Periodo de vacaciones:</h3>
+
+    <textarea name="periodoVacaciones" rows="5" cols="50"
+              placeholder="Escribe aquí las fechas en las que deseas disfrutar tus vacaciones..."
+              required></textarea>
+
+    <br><br>
+
     <input type="submit" value="Enviar">
 
 </form>
 
 
-<?php if ($error != ""): ?>
+<?php
 
-    <h3 style="color:red;">
-        <?php echo $error; ?>
-    </h3>
+if ($error != "") {
 
-<?php elseif ($_SERVER["REQUEST_METHOD"] == "POST"): ?>
+    echo "<h3 style='color:red;'>$error</h3>";
+
+} elseif ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+?>
 
     <h2>Datos introducidos:</h2>
 
-    <p><strong>Nombre:</strong> <?php echo $nombre; ?></p>
+    <p>
+        <strong>Nombre:</strong>
+        <?php echo $nombre; ?>
+    </p>
 
-    <p><strong>Primer apellido:</strong> <?php echo $apellido1; ?></p>
+    <p>
+        <strong>Primer apellido:</strong>
+        <?php echo $apellido1; ?>
+    </p>
 
-    <p><strong>Segundo apellido:</strong> <?php echo $apellido2; ?></p>
+    <p>
+        <strong>Segundo apellido:</strong>
+        <?php echo $apellido2; ?>
+    </p>
 
-    <p><strong>Edad:</strong> <?php echo $edad; ?></p>
+    <p>
+        <strong>Edad:</strong>
+        <?php echo $edad; ?>
+    </p>
 
-    <p><strong>Sexo:</strong> <?php echo $sexo; ?></p>
+    <p>
+        <strong>Sexo:</strong>
+        <?php echo $sexo; ?>
+    </p>
 
-    <p><strong>Meses de vacaciones:</strong>
+    <p>
+        <strong>Estado civil:</strong>
+        <?php echo $estadoCivil; ?>
+    </p>
+
+    <p>
+        <strong>Meses de vacaciones:</strong>
         <?php echo implode(", ", $meses); ?>
     </p>
 
-<?php endif; ?>
+    <p>
+        <strong>Periodo solicitado:</strong>
+        <?php echo $periodoVacaciones; ?>
+    </p>
+
+<?php
+
+}
+
+?>
 
 </body>
 </html>
