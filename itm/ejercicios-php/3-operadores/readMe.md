@@ -1,0 +1,1 @@
+Conjunto de ejercicios con diversos operadores en el formato php
