@@ -47,7 +47,20 @@ az postgres flexible-server create \
   --admin-password "TuPasswordSegura123!" \
   --public-access 0.0.0.0
 ```
-## Administración Azure Postgreql
+## Detener el servidor
+```bash
+az postgres flexible-server stop \
+  --resource-group postgresqltecweb \
+  --name tecweb
+```
+## Arrancar el servidor
+```bash
+az postgres flexible-server start \
+  --resource-group postgresqltecweb \
+  --name tecweb
+```
+
+## Administración Azure Postgresql
 ```bash
 # Para permitir el acceso desde cualquier servicio Azure, agrega una regla de firewall desde 0.0.0.0:
 az postgres flexible-server firewall-rule create \
