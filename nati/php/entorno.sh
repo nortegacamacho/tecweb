@@ -4,5 +4,5 @@
 export DB_HOST=”tecweb.postgres.database.azure.com”
 export DB_PORT=”5432”
 export DB_NAME=”postgres”
-export DB_USER=”admintecweb”
+export DB_USER=”php_user”
 export DB_PASSWORD=”TuPasswordSegura”
